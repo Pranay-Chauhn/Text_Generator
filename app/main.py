@@ -11,7 +11,7 @@ st.title("📚 Fine-tuned GPT-2 Text Generator")
 # Load model and tokenizer
 @st.cache_resource
 def load_model():
-    model_path = model_path = "D:\\Projects\\Text_Gen\\app\\model\\gpt2_finetuned"
+    model_path = "D:\\Projects\\Text_Gen\\app\\model\\gpt2_finetuned"
     if not os.path.exists(model_path):
         st.error("Model not found! Please train the model first.")
         return None, None
