@@ -53,12 +53,12 @@ trainer = Trainer(
 )
 
 # Train!
-print("🚀 Training started...")
+print(" Training started...")
 trainer.train()
 
 # Save final model & tokenizer
 model.save_pretrained(OUTPUT_DIR)
 tokenizer.save_pretrained(OUTPUT_DIR)
 
-print(f"✅ Training complete. Model saved to {OUTPUT_DIR}")
+print(f" Training complete. Model saved to {OUTPUT_DIR}")
 

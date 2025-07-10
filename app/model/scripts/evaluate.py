@@ -18,4 +18,4 @@ with torch.no_grad():
     loss = outputs.loss
     perplexity = torch.exp(loss).item()
 
-print(f"🧠 Perplexity: {perplexity:.2f}")
+print(f" Perplexity: {perplexity:.2f}")

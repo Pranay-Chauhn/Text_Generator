@@ -8,7 +8,7 @@ tokenizer = GPT2Tokenizer.from_pretrained(model_path)
 model.eval()
 
 # User prompt
-prompt = input("📝 Enter a prompt: ")
+prompt = input(" Enter a prompt: ")
 
 def gpt_response(prompt,max_length=150,temperature=0.7) :
     
@@ -35,7 +35,7 @@ def gpt_response(prompt,max_length=150,temperature=0.7) :
 
     # Decode and print
     generated_text = tokenizer.decode(output[0], skip_special_tokens=True)
-    print("\n📜 Generated Text:\n")
+    print("\n Generated Text:\n")
     print(generated_text)
 
     # Save to file
