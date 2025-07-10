@@ -1,5 +1,14 @@
+Set-Content -Path .gitattributes -Value @"
 * text=auto
+
+# Normalize line endings
 *.py text eol=lf
-*.json text eol=lf
 *.txt text eol=lf
-"@ | Out-File -Encoding UTF8 .gitattributes
+*.md text eol=lf
+*.json text eol=lf
+
+# Mark binaries to avoid diffing
+*.zip binary
+*.pt binary
+*.arrow binary
+"@
