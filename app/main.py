@@ -22,7 +22,8 @@ def load_model():
 
 tokenizer, model = load_model()
 
-# Prompt input Enter a prompt to start generating text:", "Once upon a time")
+# Prompt input
+prompt = st.text_input(" Enter a prompt to start generating text:", "Once upon a time")
 
 if st.button(" Generate Text") and model:
     inputs = tokenizer(prompt, return_tensors='pt', padding=True)
