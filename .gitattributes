@@ -11,4 +11,3 @@ Set-Content -Path .gitattributes -Value @"
 *.zip binary
 *.pt binary
 *.arrow binary
-"@
