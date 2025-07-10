@@ -1,0 +1,16 @@
+# Virtual Env
+.venv/
+
+# Cache
+__pycache__/
+*.py[cod]
+
+# Model artifacts
+app/model/tokenized_data/
+app/model/gpt2_finetuned/
+app/model/logs/
+
+# System
+.DS_Store
+*.zip
+"@ | Out-File -Encoding UTF8 .gitignore

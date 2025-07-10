@@ -1,0 +1,5 @@
+* text=auto
+*.py text eol=lf
+*.json text eol=lf
+*.txt text eol=lf
+"@ | Out-File -Encoding UTF8 .gitattributes

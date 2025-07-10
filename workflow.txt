@@ -1,0 +1,76 @@
+Main Goal of Assignment : 
+"The goal of this assignment is to use Python to design and implement a 
+generative model for text data. The model should be capable of generating
+new, creative, and grammatically correct sentences given an input prompt."
+
+
+Workflow :
+┌────────────────────────────┐
+│   1. Data Collection       │
+│  - Choose dataset source   │
+│    e.g. Project Gutenberg  │
+│  - Download plain text     │
+└────────────┬───────────────┘
+             │
+             |
+┌────────────────────────────┐
+│  2. Data Preprocessing     │
+│  - Clean text (remove      │
+│    special chars, etc.)    │
+│  - Tokenization            │
+│  - Chunk into input-output │
+│    pairs (for fine-tuning) │
+└────────────┬───────────────┘
+             │
+             |
+┌────────────────────────────┐
+│  3. Model Setup (GPT-2)    │
+│  - Load GPT-2 using        │
+│    HuggingFace Transformers│
+│  - Prepare tokenizer       │
+│  - Format data for GPT-2   │
+└────────────┬───────────────┘
+             │
+             |
+┌────────────────────────────┐
+│  4. Model Training         │
+│  - Fine-tune GPT-2 on      │
+│    your custom dataset     │
+│  - Use Trainer API or      │
+│    custom loop             │
+└────────────┬───────────────┘
+             │
+             |
+┌────────────────────────────┐
+│  5. Model Evaluation       │
+│  - Quantitative: Perplexity│
+│  - Qualitative: Human eval │
+│    (Check for fluency,     │
+│    creativity)             │
+└────────────┬───────────────┘
+             │
+             |
+┌────────────────────────────┐
+│  6. Text Generation        │
+│  - Input prompt            │
+│  - Generate new sentences  │
+│  - Save sample outputs     │
+└────────────┬───────────────┘
+             │
+             |
+┌────────────────────────────┐
+│  7. Report / Submission    │
+│  - Document steps, results │
+│  - Share code & examples   │
+│  - Submit before deadline  │
+└────────────────────────────┘
+
+TechStack:
+Step	             -       Tools / Libraries
+Data Collection	     -      requests, BeautifulSoup, wget
+Preprocessing	     -     NLTK, re, spaCy
+Model & Tokenizer	 -       transformers (HuggingFace)
+Training	         -       transformers.Trainer, PyTorch, datasets
+Evaluation	         -       math, manual review, textwrap
+Output	             -       Jupyter Notebook, .py script, GitHub
+

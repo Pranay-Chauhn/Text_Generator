@@ -1,0 +1,15 @@
+nltk
+spacy
+regex
+requests
+beautifulsoup4
+transformers
+datasets
+torch
+accelerate
+evaluate
+pandas
+tqdm
+textwrap
+matplotlib
+tensorflow
