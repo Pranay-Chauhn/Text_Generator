@@ -11,15 +11,15 @@ st.title(" Fine-tuned GPT-2 Text Generator")
 # Load model and tokenizer
 @st.cache_resource
 def load_model():
-    model_path = "D:\\Projects\\Text_Gen\\app\\model\\gpt2_finetuned"
-    if not os.path.exists(model_path):
-        st.error("Model not found! Please train the model first.")
+    try :
+        model_path = "Pranay-Chauhn/gpt2-finetuned"
+        tokenizer = GPT2Tokenizer.from_pretrained(model_path)
+        model = GPT2LMHeadModel.from_pretrained(model_path)
+        model.eval()
+        return tokenizer, model
+    except Exception as e :
+        st.error(f"failed to load the model: {e} ")
         return None, None
-    tokenizer = GPT2Tokenizer.from_pretrained(model_path)
-    model = GPT2LMHeadModel.from_pretrained(model_path)
-    model.eval()
-    return tokenizer, model
-
 tokenizer, model = load_model()
 
 # Prompt input
@@ -47,11 +47,6 @@ if st.button(" Generate Text") and model:
         )
 
         generated = tokenizer.decode(output[0], skip_special_tokens=True)
-
-        # Save output
-        os.makedirs("app/output", exist_ok=True)
-        with open("app/output/generated_sample.txt", "w", encoding="utf-8") as f:
-            f.write(generated)
 
     st.subheader(" Generated Text")
     st.text_area(label="", value=generated, height=300)
