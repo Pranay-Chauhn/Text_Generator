@@ -33,17 +33,19 @@ if st.button(" Generate Text") and model:
     with st.spinner("Generating..."):
         output = model.generate(
         input_ids,
-        max_length=200,
+        max_length=150,
         num_return_sequences=1,
-        no_repeat_ngram_size=2,
-        temperature=0.7,
-        top_k=50,
-        top_p=0.90,
+        no_repeat_ngram_size=3,
+        temperature=0.6,
+        top_k=40,
+        top_p=0.85,
         do_sample=True,
         early_stopping=True,
         pad_token_id=tokenizer.eos_token_id,
         attention_mask=attention_mask,
-        repetition_penalty=1.2)
+        repetition_penalty=1.3
+        )
+
         generated = tokenizer.decode(output[0], skip_special_tokens=True)
 
         # Save output
